@@ -69,6 +69,8 @@ section{
   font-size: 20px;
   color: #fff;
   line-height: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
 
 }
 
@@ -226,11 +228,12 @@ ol > li > span{
 }
 
 .author-content h2{
-  font-size: 2rem;
+  font-size: 1.7rem;
   line-height: 20px;
   margin-block-end: 25px;
   font-weight: 200;
   text-align: center;
+  text-transform: uppercase;
 }
 .author-content p{
   font-size: 16px;
@@ -363,4 +366,13 @@ ol > li > span{
 .rev-star{
   color: gold;
   margin-top: 4px;
+}
+
+
+
+/*TESTIMONIA SECTION CSS */
+
+.pricing{
+  padding: 15px 8%;
+ 
 }
