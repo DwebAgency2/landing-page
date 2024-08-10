@@ -1,28 +1,37 @@
-// Select the menu icon, close icon, and navbar elements
-let menuIcon = document.querySelector("#menu-icon");
-let closeIcon = document.querySelector("#close-icon");
-let navbar = document.querySelector(".navbar");
+"use strict"
 
-// Function to toggle the menu visibility
-const toggleMenu = () => {
-  navbar.classList.toggle(".active");
-  menuIcon.classList.toggle("hidden");
-  closeIcon.classList.toggle("hidden");
-};
+//------- adding event on multiple element
 
-// Show menu when menu icon is clicked
-menuIcon.onclick = () => {
-  toggleMenu();
-};
-
-// Show menu when close icon is clicked
-closeIcon.onclick = () => {
-  toggleMenu();
-};
-
-// Close the menu when scrolling
-window.onscroll = () => {
-  if (navbar.classList.contains("active")) {
-    toggleMenu();
+const addEventOnElements = function (elements, eventType, callback) {
+  for (let i = 0, len = elements.length; i < len; i++){
+    elements[i].addEventListener(eventType, callback)
   }
-};
+}
+
+//------- navbar toggle for mobile
+
+const navbar = document.querySelector("[data-navbar]");
+
+const navTogglers = document.querySelectorAll("[data-nav-toggler]")
+
+const toggleNavbar = function () {
+  navbar.classList.toggle("active");
+  document.body.classList.toggle("nav-active")
+}
+
+
+addEventOnElements(navTogglers, "click",toggleNavbar);
+
+
+//------- active header when window scroll down 100px
+
+
+const header = document.querySelector("[data-header]");
+
+window.addEventListener("scroll", function() {
+  if(this.window.scrollY > 100){
+    header.classList.add("active")
+  }else {
+    header.classList.remove("active")
+  }
+})

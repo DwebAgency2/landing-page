@@ -13,6 +13,8 @@
   --primary-color : #ED7016;
 }
 
+
+/*re-used classes CSS */
 .btn{
   padding: 10px;
   border: 1px solid #0c1022;
@@ -33,6 +35,10 @@
 
 section{
   padding: 20px 10%;
+}
+
+.container{
+  padding-inline: 16px;
 }
 
 .text-center{
@@ -61,33 +67,114 @@ section{
 /*HEADER SECTION CSS */
 
 .header{
-  position: fixed;
-  width: 100%;
+  position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--primary-color);
+  background-color: white;
+  width: 100%;
+  padding-block: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 4;
+
+}
+
+.header.active{
+  position: fixed;
+  animation: slidein 0.5s ease forwards;
+}
+
+@keyframes slidein {
+  0%{
+    transform: translateY(-100px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.header .container{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 8%;
-  margin-block-end: 40px;
-  transition: all .50s ease;
-  z-index: 1000;
 }
 
-.logo{
+
+.nav-open-btn{
+  font-size: 2.5rem;
+  color: #ED7016;
+  
+ }
+
+
+ .logo{
   font-size: 20px;
-  color: #fff;
+  color: black;
   line-height: 30px;
   cursor: pointer;
   text-transform: uppercase;
 
 }
 
-.navbar {
+.navbar{
+
+  position: fixed;
+  top: 0;
+  left: -300px;
+  background-color: gray;
+  color: white;
+  max-width: 300px;
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+  padding-block-end: 40px;
   display: flex;
+  flex-direction: column;
+  gap: 30px;
+  transition: all .5s ease;
 }
 
+
+.navbar.active{
+  visibility: visible;
+  transform: translateX(300px);
+}
+
+.navbar-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-close-btn{
+  background-color: #3a3939;
+  color: white;
+  font-size: 2rem;
+  padding: 6px;
+  border-radius: 4px;
+  transition: all .5s ease;
+  
+}
+
+.nav-close-btn fa-times{
+  --ionicon-stroke-width: 50px;
+}
+
+.nav-close-btn:is(:hover,:focus-visible){
+  background-color: #3a3939;
+  
+}
+
+.navbar-list{
+  margin-block-end: auto;
+}
+
+
+.navbar-link{
+  font-weight: 700;
+  padding-block: 7px;
+}
+
+/*
 ul li a{
   color: white;
   margin-inline: 17px;
@@ -116,27 +203,6 @@ ul li a:hover::before{
   width: 100%;
 }
 
-
-#menu-icon{
-  font-size: 35px;
-  z-index: 10001;
-  cursor: pointer;
-  color: #fff;
-  margin-right: 15px;
-  display: none;
-}
-
-#close-icon{
-  font-size: 35px;
-  z-index: 10001;
-  cursor: pointer;
-  color: #fff;
-  margin-right: 15px;
-  display: none;
-}
-
-
-
 .btn-nav{
   font-weight: 800;
  
@@ -149,7 +215,7 @@ ul li a:hover::before{
 background-color: #0c1022;
 color: white;
 }
-
+*/
 
 
 /*HOME SECTION CSS */
@@ -511,430 +577,3 @@ footer .footer-icon i{
 
 /*MEDIA QUERY SECTION */
 
-@media screen and  (max-width: 480px) {
-
-  .header{
-   
-    padding: 5px ;
-  }
-
-
-  .navbar{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #ED7016;
-    top: 100%;
-    right: -100%;
-    width: 225px;
-    min-height: 100vh;
-  }
-
-  .navbar a{
-    padding: 17px;
-    display: block;
-    color: #fff;
-  }
-
-  .navbar .active{
-    right: 0;
-  }
-
-  #menu-icon{
-    
-    display: block;
-  }
-
-  ul li a:hover::before{
-    width: 40%;
-  }
-
-
-  
-  .btn-nav{
- display: none;
-  }
-
-  .home{
-    display: inline-block;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-   
-    
-  }
-
-  .home-text{
-    max-width: 100%;
-  }
-
-  .home-text h1{
-    font-size: 2.5rem;
-   text-align: center;
-    margin-block-end: 20px;
-    
-  }
-
-    .star-icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2px;
-    margin: 10px;
-  }
-
-  .home .home-text .btn{
-    margin-left: 25%;
-  }
-
-  .home-img{
-    max-width: 100%;
-    margin-top: 20px;
-    margin-bottom: 25px;
-   
-  }
-  
-  .home-img img{
-    width: 50%;
-  }
-
-  .text-center h2{
-    font-size: 1.4rem;
-    text-align: center;
-  }
-  .text-center p{
-    
-    text-align: center;
-  }
-
-  .book-content{
-    display: block;
-  }
-
-  .book-img{
-    max-width: 100%;
-    margin-top: 30px;
-  }
-
-  .book-img img{
-    width: 70%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  ol{
-    max-width: 100%;
-    text-align: start;
-    margin-top: 40px;
-  }
-
-  ol li{
-    font-size: 39px;
-  }
-
-  .about-author{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .author-content{
-    max-width: 100%;
-    text-align: start;
-    margin-block-end: 20px;
-    order: 1;
-  }
-  .author-content p{
-    line-height: 35px;
-  }
-
-  .author-img{
-    max-width: 100%;
-    margin-block-end: 30px;
-   
-  }
-
- 
-
-  .box{
-    width: 100%;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.3);
-    padding:  0px;
-  
-  }
-
-  .box-1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 30px;
-  }
-
-  .box-1 p{
-    margin: 0;
-   max-width: 90%;
-   text-align: start;
-  }
-
-
- .testimonial{
-  display: flex;
-  flex-direction: column;
- }
-
-  .pricing-card {
-  display: block;
-  }
-
-  .pricing-card .card-1{
-    margin-bottom: 30px;
-  }
-
-
-  footer{
-    padding: 4px;
-   
-  }
-
-  footer p{
-    font-size: 16px;
-  }
-  
-  
-  footer .footer-icon{
-    padding: 0;
-    
-  }
-  footer .footer-icon i{
-   font-size: 8px;
-  }
-  
-  
-  
-
-}
-
-@media screen and  (max-width: 768px) {
-
-  .header{
-   
-    padding: 5px ;
-  }
-
-  .navbar{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #ED7016;
-    top: 100%;
-    right: -100%;
-    width: 225px;
-    min-height: 100vh;
-  }
-
-  .navbar.active{
-    display: block;
-    right: 0%;
-  }
-
-  #menu-icon{
-    display: block;
-  }
-
-
-  #close-icon {
-    display: none;
-  }
-
-  .navbar a{
-    padding: 17px;
-    display: block;
-    color: #fff;
-  }
-
-  ul li a:hover::before{
-    width: 40%;
-  }
-  
-  .btn-nav{
- display: none;
-  }
-
-  .home{
-    display: inline-block;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    
-  }
-
-  .home-text{
-    max-width: 100%;
-  }
-
-  .home-text h1{
-    font-size: 2.5rem;
-   text-align: center;
-    margin-block-end: 20px;
-    
-  }
-
-    .star-icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2px;
-    margin: 10px;
-  }
-
-
-  .home-text p{
-    
-   text-align: center;
-    margin-block-end: 20px;
-    
-  }
-
-  .home .home-text .btn{
-    margin-left: 38%;
-  }
-
-  .home-img{
-    max-width: 100%;
-    margin-top: 20px;
-    margin-bottom: 25px;
-   
-  }
-  
-  .home-img img{
-    width: 48%;
-  }
-
-  .text-center h2{
-    font-size: 1.4rem;
-    text-align: center;
-  }
-  .text-center p{
-    
-    text-align: center;
-  }
-
-  .book-content{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-  }
-
-  .book-img{
-    max-width: 80%;
-    margin-top: 30px;
-  }
-
-  .book-img img{
-    width: 65%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  ol{
-    max-width: 100%;
-    text-align: start;
-    margin-top: 40px;
-  }
-
-  ol li{
-    font-size: 39px;
-  }
-
-  .about-author{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .author-content{
-    max-width: 100%;
-    text-align: start;
-    margin-block-end: 20px;
-    order: 1;
-  }
-  .author-content p{
-    line-height: 35px;
-  }
-
-  .author-img{
-    max-width: 100%;
-    margin-block-end: 30px;
-  }
-
-  .author-img img{
-    max-width: 65%;
-    margin-block-end: 30px;
-  }
-
- 
-
-  .box{
-    width: 100%;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.3);
-    padding:  0px;
-  
-  }
-
-  .box-1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 30px;
-  }
-
-  .box-1 p{
-    margin: 0;
-   max-width: 90%;
-   text-align: start;
-  }
-
-  .box-1 h4{
-    margin-top: 20px;
-    margin-block-end: 30px;
-  }
-
-
-  .testimonial {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-
-
-  footer{
-    padding: 4px;
-   
-  }
-
-  footer p{
-    font-size: 16px;
-  }
-  
-  
-  footer .footer-icon{
-    padding: 0;
-    
-  }
-  footer .footer-icon i{
-   font-size: 8px;
-  }
-  
-  
-  
-
-}
