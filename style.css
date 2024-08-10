@@ -21,6 +21,16 @@
   color: #0c1022;
 }
 
+.btn-primary{
+  font-size: 20px;
+  transition: all .5s ease;
+}
+
+.btn-primary:hover{
+  background-color: #0c1022;
+  color: white;
+}
+
 section{
   padding: 20px 10%;
 }
@@ -74,7 +84,7 @@ section{
 
 }
 
-.navbar ul{
+.navbar {
   display: flex;
 }
 
@@ -84,10 +94,47 @@ ul li a{
   text-transform: uppercase;
   transition: all 0.5s ease;
   font-weight: 700;
+  position: relative;
 }
+
+ul li a::before{
+  content: "";
+  height: 4px;
+  width: 0%;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  transition: all .5s ease;
+}
+
 ul li a:hover{
   color: #0c1022;
 }
+
+ul li a:hover::before{
+  width: 100%;
+}
+
+
+#menu-icon{
+  font-size: 35px;
+  z-index: 10001;
+  cursor: pointer;
+  color: #fff;
+  margin-right: 15px;
+  display: none;
+}
+
+#close-icon{
+  font-size: 35px;
+  z-index: 10001;
+  cursor: pointer;
+  color: #fff;
+  margin-right: 15px;
+  display: none;
+}
+
 
 
 .btn-nav{
@@ -102,6 +149,8 @@ ul li a:hover{
 background-color: #0c1022;
 color: white;
 }
+
+
 
 /*HOME SECTION CSS */
 
@@ -158,6 +207,9 @@ color: white;
 
 .home-img{
   max-width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
  
 }
 
@@ -180,6 +232,9 @@ color: white;
 
 .book-img{
   max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .book-img img{
@@ -250,6 +305,9 @@ ol > li > span{
 
 .author-img{
   max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .author-img img{
@@ -370,9 +428,513 @@ ol > li > span{
 
 
 
-/*TESTIMONIA SECTION CSS */
+/*pricing SECTION CSS */
 
 .pricing{
   padding: 15px 8%;
  
+}
+
+.pricing-card{
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 4rem;
+ margin-block-end: 45px;
+}
+
+.card{
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 3px 0 rgba(237, 112, 22, 1)
+  , 0 6px 20px 0 rgba(237, 112, 22, 0.1)
+  ;
+  padding: 30px 3%;
+  margin-right: 40px;
+  transition: all .5s ease;
+  
+}
+
+.card:hover{
+  transform: translateY(-5px);
+}
+
+.pricing .card h2{
+color: #ED7016;
+font-weight: 300;
+margin-block-end: 30px;
+}
+
+.pricing .card h3{
+  font-size: 40px;
+  margin-block-end: 20px;
+}
+
+
+.pricing .card ul li{
+ font-size: 13px;
+ margin-block-end: 20px;
+ font-family: cursive;
+ 
+}
+
+
+footer{
+  padding: 12px 8%;
+  background-color: #ED7016;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+footer p{
+  font-size: 18px;
+}
+
+
+footer .footer-icon{
+  padding: 10px 20px;
+}
+
+
+footer .footer-icon i{
+ margin-right: 10px;
+ border: 1px solid #fff;
+ padding: 8px;
+ border-radius: 50px;
+}
+
+
+/*MEDIA QUERY SECTION */
+
+@media screen and  (max-width: 480px) {
+
+  .header{
+   
+    padding: 5px ;
+  }
+
+
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ED7016;
+    top: 100%;
+    right: -100%;
+    width: 225px;
+    min-height: 100vh;
+  }
+
+  .navbar a{
+    padding: 17px;
+    display: block;
+    color: #fff;
+  }
+
+  .navbar .active{
+    right: 0;
+  }
+
+  #menu-icon{
+    
+    display: block;
+  }
+
+  ul li a:hover::before{
+    width: 40%;
+  }
+
+
+  
+  .btn-nav{
+ display: none;
+  }
+
+  .home{
+    display: inline-block;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+   
+    
+  }
+
+  .home-text{
+    max-width: 100%;
+  }
+
+  .home-text h1{
+    font-size: 2.5rem;
+   text-align: center;
+    margin-block-end: 20px;
+    
+  }
+
+    .star-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    margin: 10px;
+  }
+
+  .home .home-text .btn{
+    margin-left: 25%;
+  }
+
+  .home-img{
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+   
+  }
+  
+  .home-img img{
+    width: 50%;
+  }
+
+  .text-center h2{
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .text-center p{
+    
+    text-align: center;
+  }
+
+  .book-content{
+    display: block;
+  }
+
+  .book-img{
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .book-img img{
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  ol{
+    max-width: 100%;
+    text-align: start;
+    margin-top: 40px;
+  }
+
+  ol li{
+    font-size: 39px;
+  }
+
+  .about-author{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .author-content{
+    max-width: 100%;
+    text-align: start;
+    margin-block-end: 20px;
+    order: 1;
+  }
+  .author-content p{
+    line-height: 35px;
+  }
+
+  .author-img{
+    max-width: 100%;
+    margin-block-end: 30px;
+   
+  }
+
+ 
+
+  .box{
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+    padding:  0px;
+  
+  }
+
+  .box-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .box-1 p{
+    margin: 0;
+   max-width: 90%;
+   text-align: start;
+  }
+
+
+ .testimonial{
+  display: flex;
+  flex-direction: column;
+ }
+
+  .pricing-card {
+  display: block;
+  }
+
+  .pricing-card .card-1{
+    margin-bottom: 30px;
+  }
+
+
+  footer{
+    padding: 4px;
+   
+  }
+
+  footer p{
+    font-size: 16px;
+  }
+  
+  
+  footer .footer-icon{
+    padding: 0;
+    
+  }
+  footer .footer-icon i{
+   font-size: 8px;
+  }
+  
+  
+  
+
+}
+
+@media screen and  (max-width: 768px) {
+
+  .header{
+   
+    padding: 5px ;
+  }
+
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ED7016;
+    top: 100%;
+    right: -100%;
+    width: 225px;
+    min-height: 100vh;
+  }
+
+  .navbar.active{
+    display: block;
+    right: 0%;
+  }
+
+  #menu-icon{
+    display: block;
+  }
+
+
+  #close-icon {
+    display: none;
+  }
+
+  .navbar a{
+    padding: 17px;
+    display: block;
+    color: #fff;
+  }
+
+  ul li a:hover::before{
+    width: 40%;
+  }
+  
+  .btn-nav{
+ display: none;
+  }
+
+  .home{
+    display: inline-block;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .home-text{
+    max-width: 100%;
+  }
+
+  .home-text h1{
+    font-size: 2.5rem;
+   text-align: center;
+    margin-block-end: 20px;
+    
+  }
+
+    .star-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    margin: 10px;
+  }
+
+
+  .home-text p{
+    
+   text-align: center;
+    margin-block-end: 20px;
+    
+  }
+
+  .home .home-text .btn{
+    margin-left: 38%;
+  }
+
+  .home-img{
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+   
+  }
+  
+  .home-img img{
+    width: 48%;
+  }
+
+  .text-center h2{
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .text-center p{
+    
+    text-align: center;
+  }
+
+  .book-content{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+
+  .book-img{
+    max-width: 80%;
+    margin-top: 30px;
+  }
+
+  .book-img img{
+    width: 65%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  ol{
+    max-width: 100%;
+    text-align: start;
+    margin-top: 40px;
+  }
+
+  ol li{
+    font-size: 39px;
+  }
+
+  .about-author{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .author-content{
+    max-width: 100%;
+    text-align: start;
+    margin-block-end: 20px;
+    order: 1;
+  }
+  .author-content p{
+    line-height: 35px;
+  }
+
+  .author-img{
+    max-width: 100%;
+    margin-block-end: 30px;
+  }
+
+  .author-img img{
+    max-width: 65%;
+    margin-block-end: 30px;
+  }
+
+ 
+
+  .box{
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+    padding:  0px;
+  
+  }
+
+  .box-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .box-1 p{
+    margin: 0;
+   max-width: 90%;
+   text-align: start;
+  }
+
+  .box-1 h4{
+    margin-top: 20px;
+    margin-block-end: 30px;
+  }
+
+
+  .testimonial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+
+  footer{
+    padding: 4px;
+   
+  }
+
+  footer p{
+    font-size: 16px;
+  }
+  
+  
+  footer .footer-icon{
+    padding: 0;
+    
+  }
+  footer .footer-icon i{
+   font-size: 8px;
+  }
+  
+  
+  
+
 }
