@@ -35,6 +35,7 @@
 
 section{
   padding: 20px 10%;
+  margin-top: 10%;
 }
 
 .container{
@@ -176,49 +177,6 @@ section{
 }
 
 
-/*
-ul li a{
-  color: white;
-  margin-inline: 17px;
-  text-transform: uppercase;
-  transition: all 0.5s ease;
-  font-weight: 700;
-  position: relative;
-}
-
-ul li a::before{
-  content: "";
-  height: 4px;
-  width: 0%;
-  background-color: white;
-  position: absolute;
-  top: 100%;
-  bottom: 0;
-  transition: all .5s ease;
-}
-
-ul li a:hover{
-  color: #0c1022;
-}
-
-ul li a:hover::before{
-  width: 100%;
-}
-
-.btn-nav{
-  font-weight: 800;
- 
-  padding: 10px 35px;
-  cursor: pointer;
-  transition: all .5s ease;
-}
-
-.btn-nav:hover{
-background-color: #0c1022;
-color: white;
-}
-*/
-
 
 /*HOME SECTION CSS */
 
@@ -230,7 +188,6 @@ color: white;
 
 .home-container{
  max-width: 500px;
- margin-top: 10%;
  
 }
 
@@ -575,6 +532,7 @@ margin-block-end: 20px;
   , 0 6px 20px 0 rgba(237, 112, 22, 0.1);
   transition: all .5s ease;
   margin-bottom: 15px;
+  margin-inline: 20px;
 }
 
 .card:hover{
@@ -638,6 +596,73 @@ footer .footer-icon i{
 
 @media screen and   (min-width: 768px) { 
 
+  .header{
+    padding: 10px 8%;
+  }
+  .logo{
+
+    font-size: 24px;
+   
+  }
+  .nav-open-btn,
+  .navbar-top{
+    display: none;
+  }
+
+
+  .navbar,
+  .navbar.active{
+    all: unset;
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .navbar-list{
+    display: flex;
+    gap: 10px;
+    margin-inline: auto;
+  }
+
+
+  .navbar-list li a{
+    font-size: 16px;
+    transition: all 0.5s ease;
+    font-weight: 400;
+    position: relative;
+    text-transform: uppercase;
+  }
+  
+  ul li a::before{
+    content: "";
+    height: 4px;
+    width: 0%;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    transition: all .5s ease;
+  }
+  
+  ul li a:hover{
+    color: #0c1022;
+  }
+  
+  ul li a:hover::before{
+    width: 100%;
+  }
+  
+  .btn-nav{
+    font-weight: 800;
+    padding: 0px 15px;
+    cursor: pointer;
+    transition: all .5s ease;
+  }
+  
+  .btn-nav:hover{
+  background-color: #0c1022;
+  color: white;
+  }
+
   .home-container{
     max-width: 100%;
     display: flex;
@@ -688,6 +713,73 @@ footer .footer-icon i{
 
 @media screen and   (min-width: 1024px) { 
 
+  .nav-open-btn,
+  .navbar-top{
+    display: none;
+  }
+
+
+  .navbar,
+  .navbar.active{
+    all: unset;
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .navbar-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-inline: auto;
+  }
+
+  ul li a{
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    font-weight: 700;
+    position: relative;
+  }
+  
+  ul li a::before{
+    content: "";
+    height: 4px;
+    width: 0%;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    transition: all .5s ease;
+  }
+  
+  ul li a:hover{
+    color: #0c1022;
+  }
+  
+  ul li a:hover::before{
+    width: 100%;
+  }
+  
+  .btn-nav{
+    font-weight: 800;
+    padding: 10px 35px;
+    cursor: pointer;
+    transition: all .5s ease;
+  }
+  
+  .btn-nav:hover{
+  background-color: #0c1022;
+  color: white;
+  }
+  
+  */
+  /*HOME SECTION */
+
+  .home{
+    background-color: gray;
+  }
+
   .home-container{
     max-width: 100%;
     display: flex;
@@ -695,6 +787,7 @@ footer .footer-icon i{
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    
     
   }
 
@@ -722,7 +815,6 @@ footer .footer-icon i{
   }
 
   .book-content{
-    
     max-width: 100%;
     display: flex;
     flex-direction: row;
@@ -746,9 +838,87 @@ footer .footer-icon i{
     margin-top: 0px;
   
   }
+
+   /*Author SECTION */
+
+  .about-author{
+  
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .author-content{
+    max-width: 50%;
+
+  }
+
+  .author-content h2{
+    font-size: 2rem;
+  }
+  .author-content p{
+    font-size: 17px;
+  }
+
+  .author-img{
+   
+    display: flex;
+    flex-grow: 1;
+    max-width: 100%;
+    width: 100%;
+    
+  }
+
+  .author-img img{
+   max-width: 100%;
+  }
+
+  /*BOOK SECTION */
+
+  .box{
+    padding: 20px;
+  }
+
+
+  .box-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .box-1 h4{
+    max-width: 20%;
+  }
+
+  .box-1 p{
+    max-width: 80%;
+  }
+
+  .testimonial-container{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .pricing-card{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card{
+    width: 35%;
+  }
+   
+ 
 }  
 
 
-
+@media screen and (min-width:  1200px) {
+  
+}
 
 
