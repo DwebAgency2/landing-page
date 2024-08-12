@@ -70,12 +70,19 @@ section{
   position: absolute;
   top: 0;
   left: 0;
-  background-color: white;
+  background-color: #ED7016;
   width: 100%;
-  padding-block: 20px;
+  padding-block: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 4;
 
+}
+
+.logo{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
 }
 
 .header.active{
@@ -100,27 +107,18 @@ section{
 
 
 .nav-open-btn{
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #ED7016;
+  padding: 4px;
   
- }
-
-
- .logo{
-  font-size: 20px;
-  color: black;
-  line-height: 30px;
-  cursor: pointer;
-  text-transform: uppercase;
-
 }
 
-.navbar{
 
+.navbar{
   position: fixed;
   top: 0;
   left: -300px;
-  background-color: gray;
+  background-color: #ED7016;
   color: white;
   max-width: 300px;
   width: 100%;
@@ -131,6 +129,18 @@ section{
   flex-direction: column;
   gap: 30px;
   transition: all .5s ease;
+}
+
+.navbar-list li{
+ padding: 10px 0;
+ margin-bottom: 22px;
+ 
+}
+
+.navbar-list li a{
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 
@@ -146,10 +156,11 @@ section{
 }
 
 .nav-close-btn{
-  background-color: #3a3939;
-  color: white;
+  background-color: #fff;
+  color: #ED7016;
   font-size: 2rem;
   padding: 6px;
+  border: none;
   border-radius: 4px;
   transition: all .5s ease;
   
@@ -164,15 +175,6 @@ section{
   
 }
 
-.navbar-list{
-  margin-block-end: auto;
-}
-
-
-.navbar-link{
-  font-weight: 700;
-  padding-block: 7px;
-}
 
 /*
 ul li a{
@@ -222,24 +224,32 @@ color: white;
 
 .home{
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 8%;
-  margin-top: 60px;
-  
+  height: 100%;
+}
+
+
+.home-container{
+ max-width: 500px;
+ margin-top: 10%;
+ 
 }
 
 .home-text{
-  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block-end: 30px;
+ 
 }
 
 .home-text h1{
-  font-size: 3.5rem;
-  font-weight: 500;
-  line-height: 60px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 43px;
+  margin-top: 10%;
   margin-block-end: 40px;
+  text-align: center;
 }
 
 .home-text h1 span{
@@ -268,19 +278,22 @@ color: white;
   font-size: 17px;
   font-weight: 100;
   line-height: 25px;
+  max-width: 80%;
+  text-align: center;
 }
 
 
 .home-img{
-  max-width: 55%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
  
 }
 
 .home-img img{
-  width: 70%;
+  width: 50%;
   height: auto;
   border-radius: 20px;
 }
@@ -289,28 +302,42 @@ color: white;
 /*BOOK INFO SECTION CSS */
 
 .book-info{
-  padding: 15px 8%;
+  padding: 0;
+  
+}
+
+.book-info .text-center h2{
+  font-size: 1.5rem;
 }
 
 .book-content{
-  display: flex;
+ 
+ max-width: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 0;
 }
 
 .book-img{
-  max-width: 50%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .book-img img{
-  width: 80%;
+  width: 70%;
   height: auto;
   border-radius: 20px;
 }
 
 ol{
-  max-width: 50%;
+  max-width: 100%;
+  padding: 15px 8%;
+  margin-top: 30px;
 
 }
 
@@ -340,44 +367,48 @@ ol > li > span{
 
 .about-author{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .author-content{
-  max-width: 45%;
+ padding: 10px 2%;
 }
 
 .author-content h2{
   font-size: 1.7rem;
   line-height: 20px;
   margin-block-end: 25px;
-  font-weight: 200;
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+  
 }
 .author-content p{
   font-size: 16px;
-  line-height: 20px;
+  line-height: 25px;
   margin-block-end: 25px;
  
 }
 .author-content h5{
  font-size: 19px;
  line-height: 10px;
+ margin-bottom: 20px;
  font-family: cursive;
- 
 }
 
 .author-img{
-  max-width: 50%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
+ 
 }
 
 .author-img img{
-  width: 90%;
+  width: 80%;
   height: auto;
   border-radius: 20px;
 }
@@ -393,9 +424,14 @@ ol > li > span{
   align-items: center;
 }
 
+.book-chapter .text-center h2,
+.book-chapter .text-center p{
+  text-align: center;
+}
+
 
 .box{
-  width: 65%;
+  max-width: 100%;
   border: none;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -403,14 +439,15 @@ ol > li > span{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 25px 0px;
+  padding: 0px;
   margin-block-end: 40px;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .box-1{
   display: flex;
- align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   margin-block-end: 10px;
   padding: 20px ;
@@ -419,11 +456,12 @@ ol > li > span{
 .box-1 h4{
   color: #3a3939;
   font-size: 20px;
+  margin-bottom: 20px;
 }
 
 
 .box-1 p{
- max-width: 70%;
+ 
  font-weight: 100;
  line-height: 26px;
  color: #5c5c5c;
@@ -433,25 +471,24 @@ ol > li > span{
 /*TESTIMONIA SECTION CSS */
 
 .testimonial{
-  padding: 15px 8%;
- display: grid;
- grid-template-columns: 1fr 1fr 1fr;
- gap: 30px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  margin-block-end: 45px;
+  max-width: 100%;
+ 
+}
+
+.testimonial-container{
+  max-width: 100%;
+  width: 100%;
 }
 
 .test-box{
-  width: 95%;
+  width: 100%;
   height: auto;
   border: none;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(237, 112, 22, 1)
-  , 0 6px 20px 0 rgba(237, 112, 22, 0.1)
-  ;
-  padding: 30px;
+  , 0 6px 20px 0 rgba(237, 112, 22, 0.1);
+  padding: 20px;
+margin-block-end: 20px;
   transition: all .5s ease;
 }
 
@@ -461,23 +498,29 @@ ol > li > span{
 
 .flex{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-block-end: 30px;
 }
 
 .flex img{
-  margin-right: 15px;
   border-radius: 100px;
+  margin-bottom: 20px;
   height: 80px;
 }
 
 .flex-content{
-  max-width: 80%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-content h2{
   font-size: 20px;
+  text-align: center;
   margin-block-end: 5px;
   font-family: sans-serif;
 }
@@ -501,8 +544,19 @@ ol > li > span{
  
 }
 
+.pricing .text-center h2{
+  font-size: 1.6rem;
+}
+
+.pricing .text-center h2,
+.pricing .text-center p{
+  text-align: center;
+
+}
+
 .pricing-card{
   display: flex;
+  flex-direction: column;
  justify-content: center;
  align-items: center;
  margin-top: 4rem;
@@ -511,17 +565,16 @@ ol > li > span{
 
 .card{
   width: 100%;
-  max-width: 320px;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: none;
   border-radius: 20px;
-  box-shadow: 0 4px 3px 0 rgba(237, 112, 22, 1)
-  , 0 6px 20px 0 rgba(237, 112, 22, 0.1)
-  ;
-  padding: 30px 3%;
-  margin-right: 40px;
+  box-shadow: 2px 4px 3px 0px rgba(237, 112, 22, 1)
+  , 0 6px 20px 0 rgba(237, 112, 22, 0.1);
   transition: all .5s ease;
-  
+  margin-bottom: 15px;
 }
 
 .card:hover{
@@ -532,6 +585,7 @@ ol > li > span{
 color: #ED7016;
 font-weight: 300;
 margin-block-end: 30px;
+margin-top: 20px;
 }
 
 .pricing .card h3{
@@ -549,7 +603,7 @@ margin-block-end: 30px;
 
 
 footer{
-  padding: 12px 8%;
+  padding: 10px 8%;
   background-color: #ED7016;
   display: flex;
   justify-content: space-between;
@@ -562,12 +616,17 @@ footer p{
 }
 
 
-footer .footer-icon{
-  padding: 10px 20px;
+.footer-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+
 }
 
 
 footer .footer-icon i{
+  font-size: 10px;
  margin-right: 10px;
  border: 1px solid #fff;
  padding: 8px;
@@ -576,4 +635,120 @@ footer .footer-icon i{
 
 
 /*MEDIA QUERY SECTION */
+
+@media screen and   (min-width: 768px) { 
+
+  .home-container{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
+  }
+
+  .home-text h1{
+    font-size: 3.4rem;
+    line-height: 80px;
+  }
+
+  .book-content .book-img{
+    max-width: 100%;
+  }
+  .book-content .book-img img{
+    max-width: 50%;
+  }
+
+
+  .about-author .author-img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about-author .author-img img{
+    max-width: 50%;
+
+  }
+
+  .testimonial-container{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+
+  .pricing-card{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+@media screen and   (min-width: 1024px) { 
+
+  .home-container{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
+  }
+
+  .home-text{
+    max-width: 60%;
+  }
+
+  .home-text h1{
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .home-img{
+    max-width: 40%;
+  }
+
+  .home-img img{
+    width: 100%;
+  }
+
+  /*BOOK SECTION */
+
+  .book-info .text-center h2{
+    font-size: 2rem;
+  }
+
+  .book-content{
+    
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .book-img{
+    max-width: 70%;
+   width: 100%;
+  }
+
+  .book-img img{
+    width: 100%;
+    height: auto;
+  }
+
+  ol{
+    max-width: 50%;
+    padding: 0px 0%;
+    margin-top: 0px;
+  
+  }
+}  
+
+
+
+
 
